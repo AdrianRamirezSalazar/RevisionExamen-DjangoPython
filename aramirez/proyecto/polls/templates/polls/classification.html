@@ -1,0 +1,15 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+
+{% if classification_list %}
+<ul>
+    {% for classification in classification_list %}
+    <li>
+        <a href="{% url 'polls:classificationss' classification.id %}">{{ classification }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+    <p>No classifications disponibles.</p>
+{% endif %}

@@ -1,0 +1,9 @@
+<ul>
+    {% for questions in classification.retorno_questions %}
+    <li> {{ questions.question_text }}</li>
+    {% endfor %}
+</ul>
+
+<b>
+    <a href="{% url 'polls:index' %}" class="h" >Ver todas las questions</a>
+</b>
